@@ -3,7 +3,7 @@ Example notebooks for Topic Modeling using BERTopic Zero-Shot and LLMs.
 
 ## Notebooks
 - Data Preprocessing with LLM Function Calling: [01_SETUP_DATA_function_calling](https://github.com/ccw2145/bertopic_llm_topic_modeling/blob/main/(notebook)%2001_SETUP_DATA_function_calling.ipynb)
-- Topic Modeling with BERTopic and LLM: [02_TOPIC_MODELING_bertopic](https://github.com/ccw2145/bertopic_llm_topic_modeling/blob/main/(notebook)%2002_TOPIC_MODELING_bertopic.py)
+- Topic Modeling with BERTopic and LLM: [02_TOPIC_MODELING_bertopic](https://github.com/ccw2145/bertopic_llm_topic_modeling/blob/main/(notebook)%2002_TOPIC_MODELING_bertopic.ipynb)
   
 ## Key Resources
 - Airline Reviews Dataset: https://www.kaggle.com/datasets/juhibhojani/airline-reviews  
