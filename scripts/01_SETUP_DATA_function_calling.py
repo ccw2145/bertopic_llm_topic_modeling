@@ -1,4 +1,28 @@
 # Databricks notebook source
+# MAGIC %md
+# MAGIC # 1. Batch Preprocessing with LLM Function Calling
+# MAGIC
+# MAGIC Batch Preprocessing step takes advantage of LLM’s language understanding to turn unstructured reviews into clean and structured texts.
+# MAGIC
+# MAGIC Instead of manual efforts to parse and chunk text, prompt the LLM to break down each review into multiple key intents. And for each intent, summarize text to reduce redundancy, extract named entities, and detect sentiment. The results are high-quality input data that still capture all important information (like specific names mentioned in a review).
+# MAGIC Function calling ensures LLM outputs adhere to a consistent format. Compared to a JSON parser or few shot prompting, it is easier to scale and more robust for large datasets.
+# MAGIC
+# MAGIC **This notebook will go through:**
+# MAGIC 1. Batch Preprocessing with LLM Function Calling
+# MAGIC     - Load Data
+# MAGIC     - Define LLM Prompt and Tool with example output
+# MAGIC
+# MAGIC 2. Batch Inference with Tool Calls
+# MAGIC     - Batch Inference Functions
+# MAGIC     - Parse LLM Output
+# MAGIC 3. Save Results
+# MAGIC     - Write table to UC
+# MAGIC
+# MAGIC **Blog Post with Detailed Instructions:** 
+# MAGIC https://cindycwu.medium.com/analyze-customer-reviews-with-llm-enhanced-topic-modeling-2db7b8d98917
+
+# COMMAND ----------
+
 # MAGIC %%capture
 # MAGIC %pip install openai tenacity tqdm
 # MAGIC dbutils.library.restartPython()
