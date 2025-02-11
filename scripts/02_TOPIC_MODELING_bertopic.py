@@ -1,4 +1,32 @@
 # Databricks notebook source
+# MAGIC %md
+# MAGIC # 2. Topic Modeling with BERTopic Zero-Shot and LLM Topic Generation
+# MAGIC
+# MAGIC Topic Modeling step uses BERTopic Zero-shot approach that offers flexibility to incorporate some predefined topics, while also discovering new ones with LLM refined labels during training.
+# MAGIC
+# MAGIC **This notebook will go through:**
+# MAGIC 1. Load Reviews: Retrieve review data from Unity Catalog
+# MAGIC
+# MAGIC 2. Compute Embeddings: Generate text embeddings for intents (optionally save them)
+# MAGIC
+# MAGIC 3. Configure BERTopic:
+# MAGIC     - Set up the representation model and a custom LLM prompt if needed
+# MAGIC     - Adjust dimensionality reduction and clustering model if needed
+# MAGIC
+# MAGIC 4. Train & Tune: Define parameters (e.g., min_topic_size) and run BERTopic on the reviews
+# MAGIC
+# MAGIC 5. Analyze Results:
+# MAGIC     - Inspect and refine topics
+# MAGIC     - Visualizations
+# MAGIC     - Predict topics for new reviews
+# MAGIC
+# MAGIC 6. Save Model: Persist the trained model for future use
+# MAGIC
+# MAGIC **Blog Post with Detailed Instructions:** 
+# MAGIC https://cindycwu.medium.com/analyze-customer-reviews-with-llm-enhanced-topic-modeling-2db7b8d98917
+
+# COMMAND ----------
+
 # MAGIC %%capture
 # MAGIC %pip install bertopic openai
 
